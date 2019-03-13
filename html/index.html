@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title id="title"></title>
+    <!-- for local development -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="esps.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="radio">
+            <label class="grey"><input type="radio" name="mode" value="play"><span>Play mode</span></label>
+            <label class="grey" style="float: right"><input id="ckProgram" type="radio" name="mode" value="program" checked="checked"><span>Program mode</span></label>
+        </div>
+        <br>
+        <table class="table esps-table">
+            <colgroup>
+                <col class="col-sm-offset-2 col-sm-1">
+                <col class="col-sm-1">
+                <col class="col-sm-1">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td class="td-center">
+                        <img id="btn-fw" onclick="controlButtonStart('F')" src="fw.jpg">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td-left">
+                        <img onclick="controlButtonStart('L')" src="left.jpg">
+                    </td>
+                    <td class="td-center">
+                        <img onclick="controlButtonStop()" src="stop.jpg">
+                    </td>
+                    <td class="td-right">
+                        <img onclick="controlButtonStart('R')" src="right.jpg">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td class="td-center">
+                        <img onclick="controlButtonStart('B')" src="back.jpg">
+                        </t>
+                        <td>
+                        </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br>
+
+        <div id="progmode">
+            <table class="table esps-table">
+                <colgroup>
+                    <col class="col-sm-1">
+                    <col class="col-sm-1">
+                    <col class="col-sm-1">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <td class="td-right">
+                            <img onclick="controlButtonClear()" src="clear.png">
+                        </td>
+                        <td>
+
+                        </td>
+                        <td class="td-left">
+                            <img onclick="controlButtonBackSpace()" src="backspace.png">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <textarea readonly id="program">F1 - B2</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-center" colspan="3">
+                            <img onclick="controlButtonGo()" src="go.jpg">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    <!-- for local development -->
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jqColorPicker.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+    <script type="text/javascript" src="esps.js"></script>
+    <script>
+        wsConnect();
+    </script>
+</body>
